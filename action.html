@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="action.css">
+    <script src="action.js">
+    </script>
+
+    <title>Action</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <a style="text-decoration:none;"  href = 'index.html'> <h1 style="color: black;"id="moviecatalog">Cinema Scoop</h1></a>
+    <ul class = "mymovies">
+      <li><a href="about.html">ABOUT</a></li>
+  <div class="dropdown">
+    <button class="dropbtn">MOVIES</button>
+    <div class="dropdown-content">
+      <a href="newmovie.html">New Movies</a>
+      <a href="scifi.html">Science Fiction</a>
+      <a href="action.html">Action</a>
+      <a href="favorites.html">Favorites</a>
+    </div>
+  </div>
+  <li><a href="contact.html">CONTACT</a></li>
+</ul>
+</div>
+</div>
+
+  <div class="container-fluid">
+
+<!-- review -->
+    <div class="row" style="background-color:#f9f9f9;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/skyfall.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Skyfall</h3>
+        <h5 class="author">By Lily Johnson</h5>
+        <p style="padding-right: 125px">Hailed as the best collaborative work between director, Sam Mendes, and lead actor, Daniel Craig, Skyfall is one of the most noteworthy movies in the James Bond franchise. The narrative puts a twist on the typical James Bond film, straying from the tried and true “cars and gadgets” format. It instead centers around change and renewal, with both MI6 and Bond himself. At beginning of the film, Bond is presumed dead. When he returns, Bond has to struggles through a series of trials to prove his ability and be restored to active duty. He must overcome his weaknesses in order to become the Bond seen in prior movies. This ubiquitous theme mixed with the well paced character development and stunning visuals, Skyfall makes for a refreshing experience to Britain’s well loved spy series. </p>
+      </div>
+    </div>
+
+<!-- button -->
+    <div class="row" style="background-color:#f9f9f9;">
+    <div class="likesbutton">
+        <form>
+          <button onclick="clickCounter6()" type="button" style="background-color:#f9f9f9;"><img id="button" src="images/like.png"></button>
+          <div id="result6"></div>
+          <script>
+          display6();
+          function display6(){
+            likes6=localStorage.getItem('clicks6');
+            if(likes6!=null){
+                document.getElementById("result6").innerHTML=likes6;
+            }
+          }
+           function clickCounter6(){
+                var likes6=localStorage.getItem('clicks6')
+                if(likes6==null){
+                  likes6=0;
+                }
+                likes6++;
+                localStorage.setItem("clicks6",likes6)
+                document.getElementById("result6").innerHTML=likes6;
+          }
+          </script>
+        </form>
+      </div>
+    </div>
+
+
+<!-- comment box -->
+    <div class="row" style="background-color:#f9f9f9;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr>
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name6" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment6" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction6()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments6">
+        </p>
+
+        <script>
+            localStorage.clear();
+            Parser6();
+
+        </script>
+      </div>
+    </div>
+
+
+<!-- review 2 -->
+    <!-- <div class="row" style="background-color:#efefef;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/martian.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Blade Runner 2049</h3>
+        <h5 class="author">By Lily Johnson</h5>
+        <p style="padding-right: 125px">info about movie</p>
+      </div>
+    </div>
+
+<!- -button 2-->
+    <!-- <div class="row" style="background-color:#efefef;">
+      <div class="likesbutton">
+          <form>
+            <button onclick="clickCounter2()" type="button" style="background-color:#efefef;"><img id="button" src="images/like.png"></button>
+            <div id="result2"></div>
+            <script>
+            display2();
+            function display2(){
+              likes2=localStorage.getItem('clicks2');
+              if(likes2!=null){
+                  document.getElementById("result2").innerHTML=likes2;
+              }
+            }
+             function clickCounter2(){
+                  var likes2=localStorage.getItem('clicks2')
+                  if(likes2==null){
+                    likes2=0;
+                  }
+                  likes2++;
+                  localStorage.setItem("clicks2",likes2)
+                  document.getElementById("result2").innerHTML=likes2;
+            }
+            </script>
+          </form>
+        </div>
+    </div> -->
+
+<!-- comment box 2-->
+    <!-- <div class="row" style="background-color:#efefef;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr>
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name2" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment2" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction2()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments2">
+        </p>
+
+        <script>
+            //localStorage.clear();
+            Parser2();
+
+        </script>
+      </div>
+    </div> -->
+
+
+<!-- review 3 -->
+    <div class="row" style="background-color:#efefef;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/infinitywar.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Avengers: Infinity War (SPOILERS)</h3>
+        <h5 class="author">By Lily Johnson</h5>
+        <p style="padding-right: 125px">As the third Avengers movie, Infinity War was one of the most highly anticipated movies of the year, continuing the culminating superhero story and marking the tenth anniversary of Marvel Studios. With a formidable and complex antagonist, Infinity War is a lesson in futility for its characters. For example, the Avengers struggle to save Vision and remove the mind stone, but Scarlet Witch ends up having to kill him to destroy the stone. However, her effort is futile when Thanos turns back time to murder him again, taking the mind stone. Instances like these are littered throughout the entire movie; no matter what the characters do, they always lose.</p>
+      </div>
+    </div>
+
+<!-- button 3-->
+    <div class="row" style="background-color:#efefef;">
+      <div class="likesbutton">
+          <form>
+            <button onclick="clickCounter3()" type="button" style="background-color:#efefef;"><img id="button" src="images/like.png"></button>
+            <div id="result3"></div>
+            <script>
+            display3();
+            function display3(){
+              likes3=localStorage.getItem('clicks3');
+              if(likes3!=null){
+                  document.getElementById("result3").innerHTML=likes3;
+              }
+            }
+             function clickCounter3(){
+                  var likes3=localStorage.getItem('clicks3')
+                  if(likes3==null){
+                    likes3=0;
+                  }
+                  likes3++;
+                  localStorage.setItem("clicks3",likes3)
+                  document.getElementById("result3").innerHTML=likes3;
+            }
+            </script>
+          </form>
+        </div>
+    </div>
+
+<!-- comment box 3-->
+    <div class="row" style="background-color:#efefef;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr />
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name3" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment3" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction3()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments3">
+        </p>
+
+        <script>
+            // localStorage.clear();
+            Parser3();
+
+        </script>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

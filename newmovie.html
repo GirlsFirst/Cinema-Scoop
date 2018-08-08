@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="newmovie.css">
+    <script src="newmovie.js">
+    </script>
+
+    <title>New Movies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <a style="text-decoration:none;"  href = 'index.html'> <h1 style="color: black;"id="moviecatalog">Cinema Scoop</h1></a>
+    <ul class = "mymovies">
+      <li><a href="about.html">ABOUT</a></li>
+  <div class="dropdown">
+    <button class="dropbtn">MOVIES</button>
+    <div class="dropdown-content">
+      <a href="newmovie.html">New Movies</a>
+      <a href="scifi.html">Science Fiction</a>
+      <a href="action.html">Action</a>
+      <a href="favorites.html">Favorites</a>
+    </div>
+  </div>
+  <li><a href="contact.html">CONTACT</a></li>
+</ul>
+</div>
+</div>
+
+  <div class="container-fluid">
+
+<!-- review -->
+    <div class="row" style="background-color:#f9f9f9;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/mamma.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Mamma Mia! Here We Go Again</h3>
+        <h5 class="author">By Seran Kwon</h5>
+        <p style="padding-right: 125px">Mamma Mia again has finally made a comeback! Mamma Mia was originally produced in 2008, but the sequel to that movie, Mamma Mia! Here We Go Again has been produced this year, 2018. Once famous for the song and the great enthusiasm and plot in the pilot, this new movie encaptures these traits and more, providing the same experience we enjoyed when the first movie came out. Although the last movie ended in a happy ending, this sequel takes upon lots of plot twists as well as interesting flashbacks. With tear jerks and lots of dancing and singing, Mamma Mia! Here We Go Again will surprise and interest you all over again.   </p>
+      </div>
+    </div>
+
+<!-- button -->
+    <div class="row" style="background-color:#f9f9f9;">
+    <div class="likesbutton">
+        <form>
+          <button onclick="clickCounter4()" type="button" style="background-color:#f9f9f9;"><img id="button" src="images/like.png"></button>
+          <div id="result4"></div>
+          <script>
+          display4();
+          function display4(){
+            likes4=localStorage.getItem('clicks4');
+            if(likes4!=null){
+                document.getElementById("result4").innerHTML=likes4;
+            }
+          }
+           function clickCounter4(){
+                var likes4=localStorage.getItem('clicks4')
+                if(likes4==null){
+                  likes4=0;
+                }
+                likes4++;
+                localStorage.setItem("clicks4",likes4)
+                document.getElementById("result4").innerHTML=likes4;
+          }
+          </script>
+        </form>
+      </div>
+    </div>
+
+
+<!-- comment box -->
+    <div class="row" style="background-color:#f9f9f9;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr>
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name4" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment4" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction4()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments4">
+        </p>
+
+        <script>
+            //localStorage.clear();
+            Parser4();
+
+        </script>
+      </div>
+    </div>
+
+
+<!-- review 2 -->
+    <div class="row" style="background-color:#efefef;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/crazy.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Crazy Rich Asians</h3>
+        <h5 class="author">By Seran Kwon</h5>
+        <p style="padding-right: 125px">he iconic and thought provoking, Crazy Rich Asians, is finally in theaters now. The name by itself seems attention grabbing, consumer wanting, and also extremely out of the ordinary. This movie is the first ever film that casted all Asian actors. Typical Asian roles in movies have been partaken by masters of martial arts or extremely smart scientists; however, this film goes beyond expected and shifts the viewpoint from martial arts to a luxurious lifestyle. Not only does this movie portray Asians in a different limelight, but it also encourages future movie directors to cast Asians for different roles. </p>
+      </div>
+    </div>
+
+<!-- button 2-->
+    <div class="row" style="background-color:#efefef;">
+      <div class="likesbutton">
+          <form>
+            <button onclick="clickCounter2()" type="button" style="background-color:#efefef;"><img id="button" src="images/like.png"></button>
+            <div id="result2"></div>
+            <script>
+            display2();
+            function display2(){
+              likes2=localStorage.getItem('clicks2');
+              if(likes2!=null){
+                  document.getElementById("result2").innerHTML=likes2;
+              }
+            }
+             function clickCounter2(){
+                  var likes2=localStorage.getItem('clicks2')
+                  if(likes2==null){
+                    likes2=0;
+                  }
+                  likes2++;
+                  localStorage.setItem("clicks2",likes2)
+                  document.getElementById("result2").innerHTML=likes2;
+            }
+            </script>
+          </form>
+        </div>
+    </div>
+
+<!-- comment box 2-->
+    <div class="row" style="background-color:#efefef;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr>
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name2" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment2" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction2()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments2">
+        </p>
+
+        <script>
+            //localStorage.clear();
+            Parser2();
+
+        </script>
+      </div>
+    </div>
+
+
+<!-- review 3 -->
+    <!-- <div class="row" style="background-color:#f9f9f9;">
+      <div class="col-sm-5">
+        <img class="images" img src="images/infinitywar.jpg">
+      </div>
+      <div class="col-sm-7">
+        <h3 class="movietitle">Avengers: Infinity War (SPOILERS)</h3>
+        <h5 class="author">By Lily Johnson</h5>
+        <p style="padding-right: 125px">As the third Avengers movie, Infinity War was one of the most highly anticipated movies of the year, continuing the culminating superhero story and marking the tenth anniversary of Marvel Studios. With a formidable and complex antagonist, Infinity War is a lesson in futility for its characters. For example, the Avengers struggle to save Vision and remove the mind stone, but Scarlet Witch ends up having to kill him to destroy the stone. However, her effort is futile when Thanos turns back time to murder him again, taking the mind stone. Instances like these are littered throughout the entire movie; no matter what the characters do, they always lose.</p>
+      </div>
+    </div> -->
+
+<!-- button 3-->
+    <!-- <div class="row" style="background-color:#f9f9f9;">
+      <div class="likesbutton">
+          <form>
+            <button onclick="clickCounter3()" type="button" style="background-color:#f9f9f9;"><img id="button" src="images/like.png"></button>
+            <div id="result3"></div>
+            <script>
+            display3();
+            function display3(){
+              likes3=localStorage.getItem('clicks3');
+              if(likes3!=null){
+                  document.getElementById("result3").innerHTML=likes3;
+              }
+            }
+             function clickCounter3(){
+                  var likes3=localStorage.getItem('clicks3')
+                  if(likes3==null){
+                    likes3=0;
+                  }
+                  likes3++;
+                  localStorage.setItem("clicks3",likes3)
+                  document.getElementById("result3").innerHTML=likes3;
+            }
+            </script>
+          </form>
+        </div>
+    </div> -->
+
+<!-- comment box 3-->
+    <!-- <div class="row" style="background-color:#f9f9f9;">
+      <div id="commentstart">
+        <h4>Leave a comment</h4>
+        <hr />
+        <div class="form-group">
+          <label for="inputdefault">Name</label>
+          <input class="form-control" id="name3" type="text">
+        </div>
+        <div class="form-group">
+          <label for="inputdefault">Comment</label>
+          <input class="form-control" id="comment3" type="text">
+        </div>
+        <button type="button" class="btn btn-primary" id="submit" onclick="myFunction3()">Submit</button>
+        <br>
+        <br>
+        <p id="prev_comments3">
+        </p>
+
+        <script>
+            // localStorage.clear();
+            Parser3();
+
+        </script>
+      </div>
+    </div> -->
+
+
+  </body>
+
+</html>
